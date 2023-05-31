@@ -1,0 +1,85 @@
+{% apply spaceless %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Label</title>
+        <style>
+            {% include 'css/label.css' %}
+        </style>
+    </head>
+    <body>
+        <div id="label">
+            <div class="header">
+                <div class="row row-1">
+                    <div class="col">{{ label.hubIndicator }}</div>
+                    <div class="col bg-black">{{ label.inboundSortingCode }}</div>
+                    <div class="col">{{ label.consigneeCountry }}</div>
+                    <div class="col bg-black">{{ label.depotCode }}</div>
+                </div>
+                <div class="row row-2">
+                    <div class="col">{{ label.tourNumber }}</div>
+                    <div class="col">
+                        <span class="zipcode-label">zipcode</span>
+                        <span class="zipcode">{{ label.consigneeZipcode }}</span>
+                    </div>
+                    <div class="col">{% if label.isFreight %}Freight{% endif %}</div>
+                    <div class="col"></div>
+                </div>
+                <div class="row row-3 text-center">
+                    <div class="barcode-wrapper">
+                        {{ generate_barcode(label.glsUnitNumber)|raw }}
+                    </div>
+                    {{ label.glsUnitNumberCustomerReference }}
+                </div>
+                <div class="row row-4">
+                    <div class="col col-41 bold">{{ label.freightSystemCode }}</div>
+                    <div class="col">{{ label.stationId }}</div>
+                    <div class="col">{{ label.shippingDate.format('m.d.Y') }}</div>
+                    <div class="col">{{ label.shippingDate.format('h:i') }}</div>
+                    <div class="col col-45">{{ label.weight }} kg</div>
+                    <div class="col">{{ label.sequence }} / {{ label.quantity }}</div>
+                    <div class="col">RTG {{ label.routingDate.format('mdY') }}</div>
+                    <div class="col">FR1.00.0</div>
+                </div>
+            </div>
+            <div class="row row-5">
+                <div class="body">
+                    <div class="body-content">
+                        <div class="row row-6">
+                            <div class="col col-61 bg-black text-start"><span class="text">{% if label.isFreight %}Freight{% endif %}</span></div>
+                            <div class="col col-62 bg-black text-end"><span class="text">{{ label.packageTypeDescription }}</span></div>
+                        </div>
+                        <div class="row row-7">
+                            <div class="col">
+                                <span class="company-name">{{ label.consigneeName1 }}</span><br>
+                                {{ label.consigneeName2 }}<br>
+                                {{ label.consigneeStreet }}<br>
+                                {{ label.consigneeZipcode }} {{ label.consigneeCity }}
+                            </div>
+                        </div>
+                        <div class="row row-8">
+                            <div class="col">
+                                Contact: {{ label.contact }}<br>
+                                Phone: {{ label.phone }}<br>
+                                Note: {{ label.note1 }}<br>
+                                Note: {{ label.note2 }}<br>
+                                Ref: {{ label.reference }}<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-consignor bg-white">
+                        <div class="body-consignor-text">
+                            <span class="consignor-text-header">Consignor: consignor no: {{ label.customerNumber }} Contact ID: {{ label.contactId }}</span><br>
+                            {{ label.consignorName1 }}<br>
+                            {{ label.consignorName2 }}<br>
+                            {{ label.consignorName3 }}<br>
+                            {{ label.consignorStreet }}<br>
+                            {{ label.consignorZipcode }} {{ label.consignorCity }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+{% endapply %}

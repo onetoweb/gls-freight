@@ -1,0 +1,35 @@
+{
+    "name": "onetoweb/gls-freight",
+    "description": "Gls Freight Client",
+    "keywords": [
+        "php",
+        "client",
+        "socket",
+        "gls-freight"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/onetoweb/gls-freight",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan van 't Ende",
+            "email": "jvantende@onetoweb.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "symfony/polyfill-php80": "^1.27",
+        "picqer/php-barcode-generator": "^2.0",
+        "dompdf/dompdf": "^2.0",
+        "twig/twig": "^2.9|^3.0",
+        "doctrine/annotations": "^1.11|^2.0"
+    },
+    "require-dev": {
+        "symfony/error-handler": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onetoweb\\GlsFreight\\": "src/"
+        }
+    }
+}
