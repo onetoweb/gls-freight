@@ -2,7 +2,7 @@
 
 namespace Onetoweb\GlsFreight\Message;
 
-use Onetoweb\GlsFreight\Annotation\Tag;
+use Onetoweb\GlsFreight\Annotations\Annotation\Tag;
 use DateTime;
 
 /**

@@ -3,8 +3,8 @@
 namespace Onetoweb\GlsFreight;
 
 use Onetoweb\GlsFreight\Exception\{SocketException, ResponseException};
-use Onetoweb\GlsFreight\Reader\{TagReader, TagArrayReader};
-use Onetoweb\GlsFreight\Mapper\{TagMapper, TagArrayMapper};
+use Onetoweb\GlsFreight\Annotations\Readers\Reader\{TagReader, ArrayReader};
+use Onetoweb\GlsFreight\Annotations\Mappers\Mapper\{TagMapper, ArrayMapper};
 use Onetoweb\GlsFreight\Message\{LabelRequest, LabelResponse};
 use Onetoweb\GlsFreight\LabelWriter;
 use DateTime;
@@ -279,13 +279,13 @@ class Client
     public function createLabelFromArray(array $data, bool $generatePdf = true): array
     {
         // create label request from array
-        $labelRequest = (new TagArrayReader())->read($data, LabelRequest::class);
+        $labelRequest = (new ArrayReader())->read($data, LabelRequest::class);
         
         // use label request to create label
         $labelResponse = $this->createLabel($labelRequest);
         
         // make array from label response
-        $labelArray = (new TagArrayMapper())->map($labelResponse);
+        $labelArray = (new ArrayMapper())->map($labelResponse);
         
         if ($generatePdf) {
             

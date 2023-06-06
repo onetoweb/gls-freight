@@ -1,6 +1,6 @@
 <?php
 
-namespace Onetoweb\GlsFreight\Annotation;
+namespace Onetoweb\GlsFreight\Annotations\Annotation;
 
 /**
  * @Annotation
@@ -29,7 +29,7 @@ final class Tag
     /**
      * @var string
      */
-    public $type;
+    public $type = self::TYPE_STRING;
     
     /**
      * @var string
@@ -44,7 +44,7 @@ final class Tag
     /**
      * @var array
      */
-    public $options;
+    public $options = [];
     
     /**
      * @return string[]
@@ -55,7 +55,7 @@ final class Tag
             self::TYPE_INT,
             self::TYPE_FLOAT,
             self::TYPE_STRING,
-            self::TYPE_DATE_TIME,
+            self::TYPE_DATETIME,
             self::TYPE_BOOL
         ];
     }

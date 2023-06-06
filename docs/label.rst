@@ -53,6 +53,7 @@ Create label with LabelRequest object
 .. code-block:: php
     
     use Onetoweb\GlsFreight\Message\LabelRequest;
+    use Onetoweb\GlsFreight\LabelWriter;
     
     // shipping date (eg. 3 days from now)
     $shippingDate = (new DateTime())->modify('+3 days');
@@ -93,8 +94,8 @@ Create label with LabelRequest object
     $labelWriter->getBase64()
     
     // write label to file
-    $filename 'path/to/file.pdf';
-    $labelWriter->savePdf('/home/gls-freight/label_new.pdf');
+    $filename = 'path/to/file.pdf';
+    $labelWriter->savePdf($filename);
 
 
 Cancel unit
