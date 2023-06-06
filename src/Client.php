@@ -191,7 +191,7 @@ class Client
         $data = null;
         do {
             
-            if (($buffer = socket_read($socket, 128, PHP_BINARY_READ)) === false) {
+            if (($buffer = socket_read($socket, 1024, PHP_BINARY_READ)) === false) {
                 throw $this->createSocketException($socket);
             }
             
