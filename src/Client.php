@@ -10,7 +10,7 @@ use Onetoweb\GlsFreight\LabelWriter;
 use DateTime;
 
 /**
- * Gls-freight Api Client.
+ * Gls Freight Client.
  */
 class Client
 {
@@ -247,7 +247,6 @@ class Client
             ->setCustomerNumber($this->customerNumber)
             ->setContactId($this->contactId)
             ->setCustomerId($this->customerId)
-            
         ;
         
         // map label request
@@ -322,6 +321,8 @@ class Client
     
     /**
      * Close all
+     * 
+     * @return bool
      */
     public function closeAll(): bool
     {

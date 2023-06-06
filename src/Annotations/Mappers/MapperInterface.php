@@ -3,7 +3,7 @@
 namespace Onetoweb\GlsFreight\Annotations\Mappers;
 
 /**
- * Mapper interface.
+ * Mapper Interface.
  */
 interface MapperInterface
 {

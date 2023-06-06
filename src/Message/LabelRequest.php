@@ -6,7 +6,7 @@ use Onetoweb\GlsFreight\Annotations\Annotation\Tag;
 use DateTime;
 
 /**
- * Label.
+ * Label Request.
  */
 class LabelRequest
 {
@@ -194,7 +194,7 @@ class LabelRequest
     
     /**
      * @Tag(name="T545", key="shipping_date", type="datetime", format="d.m.Y")
-     *
+     * 
      * @var DateTime
      */
     private $shippingDate;
@@ -894,7 +894,6 @@ class LabelRequest
         return $this;
     }
     
-    
     /**
      * @return DateTime
      */
@@ -925,7 +924,7 @@ class LabelRequest
     
     /**
      * @param DateTime $pickUpDate = null
-     *
+     * 
      * @return self
      */
     public function setPickUpDate(DateTime $pickUpDate = null): self
@@ -945,7 +944,7 @@ class LabelRequest
     
     /**
      * @param string $consignorName1 = null
-     *
+     * 
      * @return self
      */
     public function setConsignorName1(string $consignorName1 = null): self
@@ -965,7 +964,7 @@ class LabelRequest
     
     /**
      * @param string $consignorName2 = null
-     *
+     * 
      * @return self
      */
     public function setConsignorName2(string $consignorName2 = null): self
@@ -985,7 +984,7 @@ class LabelRequest
     
     /**
      * @param string $consignorName3 = null
-     *
+     * 
      * @return self
      */
     public function setConsignorName3(string $consignorName3 = null): self
@@ -1005,7 +1004,7 @@ class LabelRequest
     
     /**
      * @param string $consignorStreet = null
-     *
+     * 
      * @return self
      */
     public function setConsignorStreet(string $consignorStreet = null): self
@@ -1025,7 +1024,7 @@ class LabelRequest
     
     /**
      * @param string $consignorZipcode = null
-     *
+     * 
      * @return self
      */
     public function setConsignorZipcode(string $consignorZipcode = null): self
@@ -1045,7 +1044,7 @@ class LabelRequest
     
     /**
      * @param string $consignorCity = null
-     *
+     * 
      * @return self
      */
     public function setConsignorCity(string $consignorCity = null): self
@@ -1065,7 +1064,7 @@ class LabelRequest
     
     /**
      * @param string $consignorCountry = null
-     *
+     * 
      * @return self
      */
     public function setConsignorCountry(string $consignorCountry = null): self
@@ -1085,7 +1084,7 @@ class LabelRequest
     
     /**
      * @param string $consignorEmail = null
-     *
+     * 
      * @return self
      */
     public function setConsignorEmail(string $consignorEmail = null): self
@@ -1105,7 +1104,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeName1 = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeName1(string $consigneeName1 = null): self
@@ -1125,7 +1124,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeName2 = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeName2(string $consigneeName2 = null): self
@@ -1145,7 +1144,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeName3 = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeName3(string $consigneeName3 = null): self
@@ -1165,7 +1164,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeStreet = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeStreet(string $consigneeStreet = null): self
@@ -1185,7 +1184,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeZipcode = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeZipcode(string $consigneeZipcode = null): self
@@ -1205,7 +1204,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeCity = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeCity(string $consigneeCity = null): self
@@ -1225,7 +1224,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeCountry = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeCountry(string $consigneeCountry = null): self
@@ -1245,7 +1244,7 @@ class LabelRequest
     
     /**
      * @param string $consigneeEmail = null
-     *
+     * 
      * @return self
      */
     public function setConsigneeEmail(string $consigneeEmail = null): self
@@ -1265,7 +1264,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpName1 = null
-     *
+     * 
      * @return self
      */
     public function setPickUpName1(string $pickUpName1 = null): self
@@ -1285,7 +1284,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpName2 = null
-     *
+     * 
      * @return self
      */
     public function setPickUpName2(string $pickUpName2 = null): self
@@ -1305,7 +1304,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpName3 = null
-     *
+     * 
      * @return self
      */
     public function setPickUpName3(string $pickUpName3 = null): self
@@ -1325,7 +1324,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpStreet = null
-     *
+     * 
      * @return self
      */
     public function setPickUpStreet(string $pickUpStreet = null): self
@@ -1345,7 +1344,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpZipcode = null
-     *
+     * 
      * @return self
      */
     public function setPickUpZipcode(string $pickUpZipcode = null): self
@@ -1365,7 +1364,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpCity = null
-     *
+     * 
      * @return self
      */
     public function setPickUpCity(string $pickUpCity = null): self
@@ -1385,7 +1384,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpCountry = null
-     *
+     * 
      * @return self
      */
     public function setPickUpCountry(string $pickUpCountry = null): self
@@ -1405,7 +1404,7 @@ class LabelRequest
     
     /**
      * @param string $pickUpPhone = null
-     *
+     * 
      * @return self
      */
     public function setPickUpPhone(string $pickUpPhone = null): self

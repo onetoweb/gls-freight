@@ -10,17 +10,19 @@ use Exception;
 class ResponseException extends Exception
 {
     /**
-     * @var array|null
+     * @var array
      */
     private $data;
     
     /**
-     * @var string|null
+     * @var string
      */
     private $responseMessage;
     
     /**
      * @param array $data
+     * 
+     * @return self
      */
     public function setData(array $data): self
     {
@@ -30,7 +32,7 @@ class ResponseException extends Exception
     }
     
     /**
-     * @return array|null
+     * @return array
      */
     public function getData(): ?array
     {
@@ -39,6 +41,8 @@ class ResponseException extends Exception
     
     /**
      * @param string $responseMessage
+     * 
+     * @return self
      */
     public function setResponseMessage(string $responseMessage): self
     {
@@ -48,7 +52,7 @@ class ResponseException extends Exception
     }
     
     /**
-     * @param string $responseMessage
+     * @param string
      */
     public function getResponseMessage(): ?string
     {

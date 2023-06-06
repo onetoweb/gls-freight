@@ -6,7 +6,7 @@ use Onetoweb\GlsFreight\Annotations\Readers\AbstractReader;
 use Onetoweb\GlsFreight\Annotations\TagAnnotationReader;
 
 /**
- * Tag Array Reader.
+ * Array Reader.
  */
 class ArrayReader extends AbstractReader
 {

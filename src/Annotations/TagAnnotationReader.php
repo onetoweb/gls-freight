@@ -69,7 +69,7 @@ class TagAnnotationReader
                     throw new TagAnnotationReadException("unkown tag type: {$tag->type} tag types: ".Tag::getTypes());
                 }
                 
-                // check format of field type datetime
+                // check if field type datetime has field format
                 if ($tag->type === Tag::TYPE_DATETIME and !isset($tag->format)) {
                     throw new TagAnnotationReadException("tag type: {$tag->type} requires a format");
                 }
