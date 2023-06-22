@@ -308,8 +308,8 @@ class Client
         $message = $this->buildMessage([
             'T000' => $unitNumber,
             'T805' => $this->customerNumber,
-            'T050'  => $this->shippingSoftware,
-            'T051'  => $this->version,
+            'T050' => $this->shippingSoftware,
+            'T051' => $this->version,
         ]);
         
         $response = $this->request($message);
@@ -327,8 +327,8 @@ class Client
     public function closeAll(): bool
     {
         $message = $this->buildMessage([
-            'T090'  => 'DAYEND-END',
-            'T805'  => $this->customerNumber,
+            'T090' => 'DAYEND-END',
+            'T805' => $this->customerNumber,
         ]);
         
         $response = $this->request($message);
@@ -346,9 +346,9 @@ class Client
     public function closeUnit(string $unitNumber): bool
     {
         $message = $this->buildMessage([
-            'T090'  => 'DAYEND',
-            'T805'  => $this->customerNumber,
-            'T400'  => $unitNumber
+            'T090' => 'DAYEND',
+            'T805' => $this->customerNumber,
+            'T400' => $unitNumber
         ]);
         
         $response = $this->request($message);
@@ -366,9 +366,9 @@ class Client
     public function closeUnitFinal(string $unitNumber): bool
     {
         $message = $this->buildMessage([
-            'T090'  => 'DAYEND-END',
-            'T805'  => $this->customerNumber,
-            'T400'  => $unitNumber
+            'T090' => 'DAYEND-END',
+            'T805' => $this->customerNumber,
+            'T400' => $unitNumber
         ]);
         
         $response = $this->request($message);
