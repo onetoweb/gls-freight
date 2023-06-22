@@ -21,7 +21,7 @@
         "symfony/polyfill-php80": "^1.27",
         "picqer/php-barcode-generator": "^2.0",
         "dompdf/dompdf": "^2.0",
-        "twig/twig": "^2.9|^3.0",
+        "twig/twig": "^v1.40|^2.9|^3.0",
         "doctrine/annotations": "^1.11|^2.0"
     },
     "require-dev": {
