@@ -11,3 +11,7 @@ Internal refactoring
 ## [1.0.2] - 2023-06-06
 
 Increase socket read length
+
+## [1.0.3] - 2023-06-22
+
+Allow twig version v1.40 and above
