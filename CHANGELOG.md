@@ -15,3 +15,7 @@ Increase socket read length
 ## [1.0.3] - 2023-06-22
 
 Allow twig version v1.40 and above
+
+## [1.0.4] - 2023-07-06
+
+Empty string as default value for LabelRequest consigneeName2
