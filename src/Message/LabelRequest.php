@@ -274,7 +274,7 @@ class LabelRequest
      * 
      * @var string
      */
-    private $consigneeName2;
+    private $consigneeName2 = '';
     
     /**
      * @Tag(name="T862", key="consignee_name3", type="string")
