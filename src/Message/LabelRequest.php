@@ -11,13 +11,6 @@ use DateTime;
 class LabelRequest
 {
     /**
-     * @Tag(name="T000", key="unit_number", type="string")
-     * 
-     * @var string
-     */
-    private $unitNumber;
-    
-    /**
      * @Tag(name="T050", key="shipping_software", type="string")
      * 
      * @var string

@@ -20,7 +20,6 @@ Create label from array
     $shippingDate = (new DateTime())->modify('+3 days');
     
     $result = $client->createLabelFromArray([
-        'unit_number' => '197526151',
         'weight' => '250,0',
         'shipping_date' => $shippingDate,
         'reference' => 'test shipment',
@@ -59,7 +58,6 @@ Create label with LabelRequest object
     $shippingDate = (new DateTime())->modify('+3 days');
     
     $labelRequest = (new LabelRequest())
-        ->setUnitNumber('197526151')
         ->setWeight('250,0')
         ->setShippingDate($shippingDate)
         ->setReference('test shipment')
