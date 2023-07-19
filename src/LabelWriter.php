@@ -14,6 +14,11 @@ use Dompdf\{Dompdf, Options};
 class LabelWriter
 {
     /**
+     * SVG base 64 image tag
+     */
+    const SVG_IMG = '<img src="data:image/svg+xml;base64, %s" width="%d" height="%d" />';
+    
+    /**
      * @var LabelResponse
      */
     private $labelResponse;
@@ -50,10 +55,24 @@ class LabelWriter
     }
     
     /**
+     * @param int $width = 100
+     * @param int $height = 50
+     * 
+     * @return string
+     */
+    public function glsLogo(int $width = 100, int $height = 50): string
+    {
+        $filePath = __DIR__.'/../assets/img/gls_logo.svg';
+        
+        return sprintf(self::SVG_IMG, base64_encode(file_get_contents($filePath)), $width, $height);
+    }
+    
+    /**
      * @return void
      */
     private function setupTwig(): void
     {
+        // setup filesystem loader
         $loader = new FilesystemLoader([__DIR__.'/../templates', __DIR__.'/../assets']);
         
         // get twig environment
@@ -63,6 +82,7 @@ class LabelWriter
         
         // add twig functions
         $this->twig->addFunction(new TwigFunction('generate_barcode', [$this, 'generateBarcode']));
+        $this->twig->addFunction(new TwigFunction('gls_logo', [$this, 'glsLogo']));
     }
     
     /**
