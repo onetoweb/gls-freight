@@ -19,3 +19,9 @@ Allow twig version v1.40 and above
 ## [1.0.4] - 2023-07-06
 
 Empty string as default value for LabelRequest consigneeName2
+
+## [1.0.5] - 2023-07-25
+
+Removed unitNumber T000 from label request
+Correct barcode number on label
+Label layout improvements
