@@ -30,7 +30,7 @@ div, span {
 
 .bg-black {
     background-color: #000;
-    color: #fff;
+    color: #fff; 
 }
 
 .text-start {
@@ -55,6 +55,9 @@ div, span {
     height: 100%;
 }
 
+/**
+ * Row 1
+ */
 .row-1 {
     height: 40px;
     font-size: 40px;
@@ -62,47 +65,112 @@ div, span {
     line-height: 80%;
 }
 
+.row-1 > .col-11 {
+    width: 25%;
+}
+
+.row-1 > .col-12 {
+    width: 18%;
+}
+
+.row-1 > .col-13 {
+    width: 31%;
+}
+
+.row-1 > .col-14 {
+    width: 26%;
+}
+
+/**
+ * Row 2
+ */
 .row-2 {
     height: 45px;
     font-size: 30px;
-    border-top: 2.5px solid black;
+    border-top: 3px solid black;
 }
 
-.row-2 > .col,
-.row-1 > .col {
-    width: 125px;
+.row-2 > .col-21,
+.row-2 > .col-22 {
+    width: 18%;
 }
 
+.row-2 > .col-23 {
+    width: 25%;
+}
+
+.row-2 > .col-24 {
+    width: 39%;
+}
+
+/**
+ * Row 3
+ */
 .row-3 {
-    height: 135px;
+    height: 165px;
     font-size: 25px;
-    border-top: 2.5px solid black;
+    border-top: 3px solid black;
 }
 
+/**
+ * Row 4
+ */
 .row-4 {
-    border-top: 2.5px solid black;
+    border-top: 3px solid black;
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .row-4 > .col {
-    font-size: 14px;
-    margin-right: 6px;
+    line-height: 160%;
 }
 
 .row-4 > .col-41 {
-    margin-left: 5px;
+    width: 11%;
     font-size: 18px;
+    line-height: 130%;
+}
+
+.row-4 > .col-42 {
+    width: 5%;
+}
+
+.row-4 > .col-43 {
+    width: 14%;
+}
+
+.row-4 > .col-44 {
+    width: 8%;
 }
 
 .row-4 > .col-45 {
+    width: 20%;
     font-size: 22px;
+    line-height: 110%;
 }
 
+.row-4 > .col-46 {
+    width: 11%;
+}
+
+.row-4 > .col-47 {
+    width: 19%;
+}
+
+.row-4 > .col-48 {
+    width: 12%;
+}
+
+/**
+ * Row 5
+ */
 .row-5 {
     height: 250px;
 }
 
+/**
+ * Row 6
+ */
 .row-6 {
     height: 27px;
     font-size: 20px;
@@ -116,26 +184,58 @@ div, span {
     padding: 5px;
 }
 
+/**
+ * Row 7
+ */
 .row-7 {
     border-top: 0.75px solid black;
-    height: 150px;
-    padding: 5px;
+    height: 120px;
 }
 
+/**
+ * Row 8
+ */
 .row-8 {
     border-top: 0.75px solid black;
-    height: 150px;
+    height: 100px;
     padding: 5px;
 }
 
+/**
+ * Row 9
+ */
 .row-9 {
     border-top: 0.75px solid black;
-    height: 150px;
+    height: 110px;
     padding: 5px;
+}
+
+/**
+ * Row 10
+ */
+.row-10 {
+    border: 1px solid black;
+    width: 500px;
+    height: 70px;
+    top: 682px;
+    left: -0.5px;
+    z-index: 1091;
+    position: absolute;
+    background-color: #fff;
+    margin: 8px;
+}
+
+/**
+ * Div
+ */
+.gls-logo {
+    margin-top: 15px;
+    margin-right: 15px;
+    vertical-align: bottom;
 }
 
 .zipcode-label {
-    font-size: 9px;
+    font-size: 14px;
     display: block;
 }
 
@@ -162,11 +262,14 @@ div, span {
     border-top: 0.75px solid black;
 }
 
+/**
+ * Consignor vertical block
+ */
 .body-consignor {
     height: 120px;
-    width: 472px;
-    top: 177px;
-    right: -177px;
+    width: 447px;
+    top: 164px;
+    right: -164px;
     
     position: absolute;
     transform: rotate(90deg);
@@ -183,4 +286,41 @@ div, span {
 
 .consignor-text-header {
     font-size: 11px;
+}
+
+/**
+ * HTML fix
+ */
+body#label_html .row-1 .col {
+    line-height: 95%;
+}
+
+body#label_html .row-2 .col-21,
+body#label_html .row-2 .col-23,
+body#label_html .row-2 .col-24 {
+    line-height: 140%;
+}
+
+body#label_html .zipcode-label {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+body#label_html .row-4 > .col {
+    line-height: 260%;
+}
+
+body#label_html .row-4 > .col-41 {
+    line-height: 200%;
+}
+
+body#label_html .row-4 > .col-45 {
+    line-height: 170%;
+}
+
+/**
+ * PDF fix
+ */
+body#label_pdf .row-10 {
+    margin: 0;
 }

@@ -16,7 +16,7 @@ class LabelWriter
     /**
      * SVG base 64 image tag
      */
-    const SVG_IMG = '<img src="data:image/svg+xml;base64, %s" width="%d" height="%d" />';
+    const SVG_IMG = '<img src="data:image/svg+xml;base64, %s" width="%d" height="%d" align="%s" class="%s" />';
     
     /**
      * @var LabelResponse
@@ -24,16 +24,28 @@ class LabelWriter
     private $labelResponse;
     
     /**
+     * @var bool
+     */
+    private $debug;
+    
+    /**
      * @var Environment
      */
     private $twig;
     
     /**
-     * @param LabelResponse $label
+     * @var string
      */
-    public function __construct(LabelResponse $labelResponse)
+    private $pdfOutput;
+    
+    /**
+     * @param LabelResponse $label
+     * @param bool $debug = false
+     */
+    public function __construct(LabelResponse $labelResponse, bool $debug = false)
     {
         $this->labelResponse = $labelResponse;
+        $this->debug = $debug;
         $this->setupTwig();
     }
     
@@ -45,7 +57,7 @@ class LabelWriter
      * 
      * @return string
      */
-    public static function generateBarcode(string $barcode = null, string $type = BarcodeGenerator::TYPE_CODE_128_C, int $widthFactor = 3, int $height = 90): string
+    public static function generateBarcode(string $barcode = null, string $type = BarcodeGenerator::TYPE_CODE_128_C, int $widthFactor = 3, int $height = 120): string
     {
         if ($barcode) {
             return (new BarcodeGeneratorHTML())->getBarcode($barcode, $type, $widthFactor, $height);
@@ -55,16 +67,18 @@ class LabelWriter
     }
     
     /**
-     * @param int $width = 100
+     * @param int $width = 140
      * @param int $height = 50
+     * @param string $align = 'right'
+     * @param string $class = 'gls-logo' 
      * 
      * @return string
      */
-    public function glsLogo(int $width = 100, int $height = 50): string
+    public static function glsLogo(int $width = 140, int $height = 50, string $align = 'right', string $class = 'gls-logo'): string
     {
-        $filePath = __DIR__.'/../assets/img/gls_logo.svg';
+        $filePath = __DIR__ . '/../assets/img/gls_logo.svg';
         
-        return sprintf(self::SVG_IMG, base64_encode(file_get_contents($filePath)), $width, $height);
+        return sprintf(self::SVG_IMG, base64_encode(file_get_contents($filePath)), $width, $height, $align, $class);
     }
     
     /**
@@ -86,13 +100,16 @@ class LabelWriter
     }
     
     /**
+     * @param string $bodyId = ''
+     * 
      * @return string
      */
-    public function getHtml(): string
+    public function getHtml(string $bodyId = 'label_html'): string
     {
         // generate html
         return $this->twig->render('label.html.twig', [
-            'label' => $this->labelResponse
+            'label' => $this->labelResponse,
+            'body_id' => $bodyId
         ]);
     }
     
@@ -109,15 +126,39 @@ class LabelWriter
             ->setDefaultFont('Swiss721CondensedBT')
         ;
         
+        // set debug
+        if ($this->debug) {
+            
+            $options
+                ->setDebugLayout(true)
+                ->setDebugLayoutLines(true)
+                ->setDebugLayoutBlocks(true)
+                ->setDebugLayoutInline(true)
+                ->setDebugLayoutPaddingBox(true)
+            ;
+        }
+        
         // create DomPdf
         $dompdf = new Dompdf($options);
         
         // render pdf
-        $dompdf->loadHtml($this->getHtml());
+        $dompdf->loadHtml($this->getHtml('label_pdf'));
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
         
         return $dompdf;
+    }
+    
+    /**
+     * @return string
+     */
+    public function getPdfOutput(): string
+    {
+        if ($this->pdfOutput === null) {
+            $this->pdfOutput = $this->getDomPdf()->output();
+        }
+        
+        return $this->pdfOutput;
     }
     
     /**
@@ -127,7 +168,7 @@ class LabelWriter
     {
         header('Content-Type: application/pdf');
         
-        echo $this->getDomPdf()->output();
+        echo $this->getPdfOutput();
         
         flush();
     }
@@ -139,7 +180,7 @@ class LabelWriter
      */
     public function savePdf(string $filename): bool
     {
-        return (file_put_contents($filename, $this->getDomPdf()->output()) !== false);
+        return (file_put_contents($filename, $this->getPdfOutput()) !== false);
     }
     
     /**
@@ -147,6 +188,6 @@ class LabelWriter
      */
     public function getBase64(): string
     {
-        return base64_encode($this->getDomPdf()->output());
+        return base64_encode($this->getPdfOutput());
     }
 }
