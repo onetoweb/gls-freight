@@ -24,7 +24,7 @@ Create label from array
         'shipping_date' => $shippingDate,
         'reference' => 'test shipment',
         'freight' => true,
-        'package_type' => 'BP',
+        'package_type' => 'PL',
         'sequence' => '001',
         'quantity' => '001',
         'consignor_name1' => 'Name',
@@ -62,7 +62,7 @@ Create label with LabelRequest object
         ->setShippingDate($shippingDate)
         ->setReference('test shipment')
         ->setFreight(true)
-        ->setPackageType('BP')
+        ->setPackageType('PL')
         ->setSequence('001')
         ->setQuantity('001')
         ->setConsignorName1('Name')
