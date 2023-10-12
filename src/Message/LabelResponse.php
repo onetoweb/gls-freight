@@ -761,6 +761,16 @@ class LabelResponse
     /**
      * @return string
      */
+    public function getBarcodeDescription(): string
+    {
+        $parts = explode(',', $this->glsUnitNumberCustomerReference);
+        
+        return end($parts);
+    }
+    
+    /**
+     * @return string
+     */
     public function getWeight(): ?string
     {
         return $this->weight;
