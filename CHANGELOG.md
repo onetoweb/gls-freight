@@ -25,3 +25,7 @@
  - Removed unitNumber T000 from label request
  - Correct barcode number on label
  - Label layout improvements
+
+## [1.0.6] - 2024-04-16
+
+ - Declare properties class, callback in TagAnnotationReader to prevent php 8.2 deprecation notice
