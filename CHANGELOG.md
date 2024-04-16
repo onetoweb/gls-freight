@@ -26,6 +26,10 @@
  - Correct barcode number on label
  - Label layout improvements
 
-## [1.0.6] - 2024-04-16
+## [1.0.6] - 2023-08-12
+
+ - Add barcode description
+
+## [1.0.7] - 2024-04-16
 
  - Declare properties class, callback in TagAnnotationReader to prevent php 8.2 deprecation notice
