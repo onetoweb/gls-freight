@@ -12,6 +12,9 @@ use ReflectionClass;
  */
 class TagAnnotationReader
 {
+    protected $class;
+    protected $callback;
+
     /**
      * @param string $class
      * @param callable $callback
