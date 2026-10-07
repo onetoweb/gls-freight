@@ -10,14 +10,14 @@ use Exception;
 class ResponseException extends Exception
 {
     /**
-     * @var array
+     * @var array|null
      */
-    private $data;
+    private ?array $data = null;
     
     /**
-     * @var string
+     * @var string|null
      */
-    private $responseMessage;
+    private ?string $responseMessage = null;
     
     /**
      * @param array $data

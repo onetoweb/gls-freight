@@ -6,6 +6,7 @@ use Onetoweb\GlsFreight\Annotations\Annotation\Tag;
 use Onetoweb\GlsFreight\Annotations\Exception\TagAnnotationReadException;
 use Doctrine\Common\Annotations\AnnotationReader;
 use ReflectionClass;
+use Closure;
 
 /**
  * Tag Annotation Reader.
@@ -13,23 +14,13 @@ use ReflectionClass;
 class TagAnnotationReader
 {
     /**
-     * @var string
-     */
-    protected $class;
-    
-    /**
-     * @var callable
-     */
-    protected $callback;
-    
-    /**
      * @param string $class
-     * @param callable $callback
+     * @param Closure $callback
      */
-    public function __construct(string $class, callable $callback)
-    {
-        $this->class = $class;
-        $this->callback = $callback;
+    public function __construct(
+        protected string $class,
+        protected Closure $callback
+    ) {
         $this->getTagProperties();
     }
     

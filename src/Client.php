@@ -15,41 +15,6 @@ use DateTime;
 class Client
 {
     /**
-     * @var string
-     */
-    private $host;
-    
-    /**
-     * @var int
-     */
-    private $port;
-    
-    /**
-     * @param string
-     */
-    private $contactId;
-    
-    /**
-     * @param string
-     */
-    private $customerId;
-    
-    /**
-     * @param string
-     */
-    private $customerNumber;
-    
-    /**
-     * @param string
-     */
-    private $shippingSoftware;
-    
-    /**
-     * @param string
-     */
-    private $version;
-    
-    /**
      * Message constants.
      */
     public const GLS_PREFIX = '\\\\\\\\\\GLS\\\\\\\\\\';
@@ -66,21 +31,26 @@ class Client
      * @param string $version
      */
     public function __construct(
-        string $host,
-        int $port,
-        string $contactId,
-        string $customerId,
-        string $customerNumber,
-        string $shippingSoftware,
-        string $version
+        
+        #[\SensitiveParameter]
+        private string $host,
+        
+        #[\SensitiveParameter]
+        private int $port,
+        
+        #[\SensitiveParameter]
+        private string $contactId,
+        
+        #[\SensitiveParameter]
+        private string $customerId,
+        
+        #[\SensitiveParameter]
+        private string $customerNumber,
+        
+        private string $shippingSoftware,
+        private string $version
     ) {
-        $this->host = $host;
-        $this->port = $port;
-        $this->contactId = $contactId;
-        $this->customerId = $customerId;
-        $this->customerNumber = $customerNumber;
-        $this->shippingSoftware = $shippingSoftware;
-        $this->version = $version;
+        
     }
     
     /**

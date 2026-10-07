@@ -19,16 +19,6 @@ class LabelWriter
     const SVG_IMG = '<img src="data:image/svg+xml;base64, %s" width="%d" height="%d" align="%s" class="%s" />';
     
     /**
-     * @var LabelResponse
-     */
-    private $labelResponse;
-    
-    /**
-     * @var bool
-     */
-    private $debug;
-    
-    /**
      * @var Environment
      */
     private $twig;
@@ -42,10 +32,10 @@ class LabelWriter
      * @param LabelResponse $label
      * @param bool $debug = false
      */
-    public function __construct(LabelResponse $labelResponse, bool $debug = false)
-    {
-        $this->labelResponse = $labelResponse;
-        $this->debug = $debug;
+    public function __construct(
+        private LabelResponse $labelResponse,
+        private bool $debug = false
+    ) {
         $this->setupTwig();
     }
     
@@ -57,7 +47,7 @@ class LabelWriter
      * 
      * @return string
      */
-    public static function generateBarcode(string $barcode = null, string $type = BarcodeGenerator::TYPE_CODE_128_C, int $widthFactor = 3, int $height = 120): string
+    public static function generateBarcode(?string $barcode = null, string $type = BarcodeGenerator::TYPE_CODE_128_C, int $widthFactor = 3, int $height = 120): string
     {
         if ($barcode) {
             return (new BarcodeGeneratorHTML())->getBarcode($barcode, $type, $widthFactor, $height);

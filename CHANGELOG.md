@@ -33,3 +33,8 @@
 ## [1.0.7] - 2024-04-16
 
  - Declare properties class, callback in TagAnnotationReader to prevent php 8.2 deprecation notice
+
+## [2.0.0] - 2026-04-06
+
+ - Require php 8.1 or higher
+ - Add SensitiveParameter attributes

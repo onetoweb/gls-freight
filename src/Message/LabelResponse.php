@@ -471,7 +471,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setUnitNumber(string $unitNumber = null): self
+    public function setUnitNumber(?string $unitNumber = null): self
     {
         $this->unitNumber = $unitNumber;
         
@@ -491,7 +491,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setShippingSoftware(string $shippingSoftware = null): self
+    public function setShippingSoftware(?string $shippingSoftware = null): self
     {
         $this->shippingSoftware = $shippingSoftware;
         
@@ -511,7 +511,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setVersion(string $version = null): self
+    public function setVersion(?string $version = null): self
     {
         $this->version = $version;
         
@@ -531,7 +531,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setDepotCode(string $depotCode = null): self
+    public function setDepotCode(?string $depotCode = null): self
     {
         $this->depotCode = $depotCode;
         
@@ -551,7 +551,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setTourNumber(string $tourNumber = null): self
+    public function setTourNumber(?string $tourNumber = null): self
     {
         $this->tourNumber = $tourNumber;
         
@@ -571,7 +571,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setInboundSortingCode(string $inboundSortingCode = null): self
+    public function setInboundSortingCode(?string $inboundSortingCode = null): self
     {
         $this->inboundSortingCode = $inboundSortingCode;
         
@@ -591,7 +591,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setHubIndicator(string $hubIndicator = null): self
+    public function setHubIndicator(?string $hubIndicator = null): self
     {
         $this->hubIndicator = $hubIndicator;
         
@@ -611,7 +611,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setProductType(string $productType = null): self
+    public function setProductType(?string $productType = null): self
     {
         $this->productType = $productType;
         
@@ -631,7 +631,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setStationId(string $stationId = null): self
+    public function setStationId(?string $stationId = null): self
     {
         $this->stationId = $stationId;
         
@@ -651,7 +651,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setFreightSystemCode(string $freightSystemCode = null): self
+    public function setFreightSystemCode(?string $freightSystemCode = null): self
     {
         $this->freightSystemCode = $freightSystemCode;
         
@@ -671,7 +671,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setFreightTerms(string $freightTerms = null): self
+    public function setFreightTerms(?string $freightTerms = null): self
     {
         $this->freightTerms = $freightTerms;
         
@@ -691,7 +691,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setSequence(string $sequence = null): self
+    public function setSequence(?string $sequence = null): self
     {
         $this->sequence = $sequence;
         
@@ -711,7 +711,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setQuantity(string $quantity = null): self
+    public function setQuantity(?string $quantity = null): self
     {
         $this->quantity = $quantity;
         
@@ -731,7 +731,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setGlsUnitNumber(string $glsUnitNumber = null): self
+    public function setGlsUnitNumber(?string $glsUnitNumber = null): self
     {
         $this->glsUnitNumber = $glsUnitNumber;
         
@@ -751,7 +751,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setGlsUnitNumberCustomerReference(string $glsUnitNumberCustomerReference = null): self
+    public function setGlsUnitNumberCustomerReference(?string $glsUnitNumberCustomerReference = null): self
     {
         $this->glsUnitNumberCustomerReference = $glsUnitNumberCustomerReference;
         
@@ -781,7 +781,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setWeight(string $weight = null): self
+    public function setWeight(?string $weight = null): self
     {
         $this->weight = $weight;
         
@@ -801,7 +801,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setReference(string $reference = null): self
+    public function setReference(?string $reference = null): self
     {
         $this->reference = $reference;
         
@@ -821,7 +821,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setContactId(string $contactId = null): self
+    public function setContactId(?string $contactId = null): self
     {
         $this->contactId = $contactId;
         
@@ -841,7 +841,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setCustomerNumber(string $customerNumber = null): self
+    public function setCustomerNumber(?string $customerNumber = null): self
     {
         $this->customerNumber = $customerNumber;
         
@@ -861,7 +861,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setCustomerId(string $customerId = null): self
+    public function setCustomerId(?string $customerId = null): self
     {
         $this->customerId = $customerId;
         
@@ -881,7 +881,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setContact(string $contact = null): self
+    public function setContact(?string $contact = null): self
     {
         $this->contact = $contact;
         
@@ -901,7 +901,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPhone(string $phone = null): self
+    public function setPhone(?string $phone = null): self
     {
         $this->phone = $phone;
         
@@ -921,7 +921,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setNote1(string $note1 = null): self
+    public function setNote1(?string $note1 = null): self
     {
         $this->note1 = $note1;
         
@@ -941,7 +941,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setNote2(string $note2 = null): self
+    public function setNote2(?string $note2 = null): self
     {
         $this->note2 = $note2;
         
@@ -961,7 +961,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setTextForReturns(string $textForReturns = null): self
+    public function setTextForReturns(?string $textForReturns = null): self
     {
         $this->textForReturns = $textForReturns;
         
@@ -981,7 +981,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPackageType(string $packageType = null): self
+    public function setPackageType(?string $packageType = null): self
     {
         $this->packageType = $packageType;
         
@@ -1001,7 +1001,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPackageTypeDescription(string $packageTypeDescription = null): self
+    public function setPackageTypeDescription(?string $packageTypeDescription = null): self
     {
         $this->packageTypeDescription = $packageTypeDescription;
         
@@ -1021,7 +1021,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPhoneIfPickUp(string $phoneIfPickUp = null): self
+    public function setPhoneIfPickUp(?string $phoneIfPickUp = null): self
     {
         $this->phoneIfPickUp = $phoneIfPickUp;
         
@@ -1041,7 +1041,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setCodeSpecialContract(string $codeSpecialContract = null): self
+    public function setCodeSpecialContract(?string $codeSpecialContract = null): self
     {
         $this->codeSpecialContract = $codeSpecialContract;
         
@@ -1061,7 +1061,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setEuroPalletsExchange(string $euroPalletsExchange = null): self
+    public function setEuroPalletsExchange(?string $euroPalletsExchange = null): self
     {
         $this->euroPalletsExchange = $euroPalletsExchange;
         
@@ -1081,7 +1081,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setUnitLength(string $unitLength = null): self
+    public function setUnitLength(?string $unitLength = null): self
     {
         $this->unitLength = $unitLength;
         
@@ -1101,7 +1101,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setRequestProofOfDelivery(string $requestProofOfDelivery = null): self
+    public function setRequestProofOfDelivery(?string $requestProofOfDelivery = null): self
     {
         $this->requestProofOfDelivery = $requestProofOfDelivery;
         
@@ -1281,7 +1281,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorName1(string $consignorName1 = null): self
+    public function setConsignorName1(?string $consignorName1 = null): self
     {
         $this->consignorName1 = $consignorName1;
         
@@ -1301,7 +1301,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorName2(string $consignorName2 = null): self
+    public function setConsignorName2(?string $consignorName2 = null): self
     {
         $this->consignorName2 = $consignorName2;
         
@@ -1321,7 +1321,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorName3(string $consignorName3 = null): self
+    public function setConsignorName3(?string $consignorName3 = null): self
     {
         $this->consignorName3 = $consignorName3;
         
@@ -1341,7 +1341,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorStreet(string $consignorStreet = null): self
+    public function setConsignorStreet(?string $consignorStreet = null): self
     {
         $this->consignorStreet = $consignorStreet;
         
@@ -1361,7 +1361,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorZipcode(string $consignorZipcode = null): self
+    public function setConsignorZipcode(?string $consignorZipcode = null): self
     {
         $this->consignorZipcode = $consignorZipcode;
         
@@ -1381,7 +1381,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorCity(string $consignorCity = null): self
+    public function setConsignorCity(?string $consignorCity = null): self
     {
         $this->consignorCity = $consignorCity;
         
@@ -1401,7 +1401,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorCountry(string $consignorCountry = null): self
+    public function setConsignorCountry(?string $consignorCountry = null): self
     {
         $this->consignorCountry = $consignorCountry;
         
@@ -1421,7 +1421,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorPhone(string $consignorPhone = null): self
+    public function setConsignorPhone(?string $consignorPhone = null): self
     {
         $this->consignorPhone = $consignorPhone;
         
@@ -1441,7 +1441,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsignorEmail(string $consignorEmail = null): self
+    public function setConsignorEmail(?string $consignorEmail = null): self
     {
         $this->consignorEmail = $consignorEmail;
         
@@ -1461,7 +1461,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeName1(string $consigneeName1 = null): self
+    public function setConsigneeName1(?string $consigneeName1 = null): self
     {
         $this->consigneeName1 = $consigneeName1;
         
@@ -1481,7 +1481,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeName2(string $consigneeName2 = null): self
+    public function setConsigneeName2(?string $consigneeName2 = null): self
     {
         $this->consigneeName2 = $consigneeName2;
         
@@ -1501,7 +1501,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeName3(string $consigneeName3 = null): self
+    public function setConsigneeName3(?string $consigneeName3 = null): self
     {
         $this->consigneeName3 = $consigneeName3;
         
@@ -1521,7 +1521,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeStreet(string $consigneeStreet = null): self
+    public function setConsigneeStreet(?string $consigneeStreet = null): self
     {
         $this->consigneeStreet = $consigneeStreet;
         
@@ -1541,7 +1541,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeZipcode(string $consigneeZipcode = null): self
+    public function setConsigneeZipcode(?string $consigneeZipcode = null): self
     {
         $this->consigneeZipcode = $consigneeZipcode;
         
@@ -1561,7 +1561,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeCity(string $consigneeCity = null): self
+    public function setConsigneeCity(?string $consigneeCity = null): self
     {
         $this->consigneeCity = $consigneeCity;
         
@@ -1581,7 +1581,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeCountry(string $consigneeCountry = null): self
+    public function setConsigneeCountry(?string $consigneeCountry = null): self
     {
         $this->consigneeCountry = $consigneeCountry;
         
@@ -1601,7 +1601,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneePhone(string $consigneePhone = null): self
+    public function setConsigneePhone(?string $consigneePhone = null): self
     {
         $this->consigneePhone = $consigneePhone;
         
@@ -1621,7 +1621,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setConsigneeEmail(string $consigneeEmail = null): self
+    public function setConsigneeEmail(?string $consigneeEmail = null): self
     {
         $this->consigneeEmail = $consigneeEmail;
         
@@ -1641,7 +1641,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpName1(string $pickUpName1 = null): self
+    public function setPickUpName1(?string $pickUpName1 = null): self
     {
         $this->pickUpName1 = $pickUpName1;
         
@@ -1661,7 +1661,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpName2(string $pickUpName2 = null): self
+    public function setPickUpName2(?string $pickUpName2 = null): self
     {
         $this->pickUpName2 = $pickUpName2;
         
@@ -1681,7 +1681,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpName3(string $pickUpName3 = null): self
+    public function setPickUpName3(?string $pickUpName3 = null): self
     {
         $this->pickUpName3 = $pickUpName3;
         
@@ -1701,7 +1701,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpStreet(string $pickUpStreet = null): self
+    public function setPickUpStreet(?string $pickUpStreet = null): self
     {
         $this->pickUpStreet = $pickUpStreet;
         
@@ -1721,7 +1721,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpZipcode(string $pickUpZipcode = null): self
+    public function setPickUpZipcode(?string $pickUpZipcode = null): self
     {
         $this->pickUpZipcode = $pickUpZipcode;
         
@@ -1741,7 +1741,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpCity(string $pickUpCity = null): self
+    public function setPickUpCity(?string $pickUpCity = null): self
     {
         $this->pickUpCity = $pickUpCity;
         
@@ -1761,7 +1761,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpCountry(string $pickUpCountry = null): self
+    public function setPickUpCountry(?string $pickUpCountry = null): self
     {
         $this->pickUpCountry = $pickUpCountry;
         
@@ -1781,7 +1781,7 @@ class LabelResponse
      * 
      * @return self
      */
-    public function setPickUpPhone(string $pickUpPhone = null): self
+    public function setPickUpPhone(?string $pickUpPhone = null): self
     {
         $this->pickUpPhone = $pickUpPhone;
         

@@ -1,6 +1,6 @@
 StartFontMetrics 4.1
 Notice Converted by PHP-font-lib
-Comment https://github.com/PhenX/php-font-lib
+Comment https://github.com/dompdf/php-font-lib
 EncodingScheme FontSpecific
 Copyright Copyright 1990-1992 Bitstream Inc.  All rights reserved.
 FontName Swis721 Cn BT
@@ -214,6 +214,9 @@ U 262 ; WX 548 ; N Cacute ; G 253
 U 263 ; WX 454 ; N cacute ; G 254
 U 268 ; WX 548 ; N Ccaron ; G 255
 U 269 ; WX 454 ; N ccaron ; G 256
+U 270 ; WX 600 ; N .notdef ; G 0
+U 271 ; WX 600 ; N .notdef ; G 0
+U 272 ; WX 600 ; N .notdef ; G 0
 U 273 ; WX 486 ; N dmacron ; G 257
 U 286 ; WX 589 ; N Gbreve ; G 248
 U 287 ; WX 486 ; N gbreve ; G 249
@@ -243,15 +246,23 @@ U 937 ; WX 769 ; N Omega ; G 159
 U 960 ; WX 644 ; N pi ; G 155
 U 8211 ; WX 500 ; N endash ; G 178
 U 8212 ; WX 1000 ; N emdash ; G 179
+U 8213 ; WX 600 ; N .notdef ; G 0
+U 8214 ; WX 600 ; N .notdef ; G 0
+U 8215 ; WX 600 ; N .notdef ; G 0
 U 8216 ; WX 250 ; N quoteleft ; G 182
 U 8217 ; WX 250 ; N quoteright ; G 183
 U 8218 ; WX 250 ; N quotesinglbase ; G 196
+U 8219 ; WX 600 ; N .notdef ; G 0
 U 8220 ; WX 443 ; N quotedblleft ; G 180
 U 8221 ; WX 443 ; N quotedblright ; G 181
 U 8222 ; WX 443 ; N quotedblbase ; G 197
+U 8223 ; WX 600 ; N .notdef ; G 0
 U 8224 ; WX 500 ; N dagger ; G 130
 U 8225 ; WX 500 ; N daggerdbl ; G 194
 U 8226 ; WX 590 ; N bullet ; G 135
+U 8227 ; WX 600 ; N .notdef ; G 0
+U 8228 ; WX 600 ; N .notdef ; G 0
+U 8229 ; WX 600 ; N .notdef ; G 0
 U 8230 ; WX 1000 ; N ellipsis ; G 171
 U 8240 ; WX 1127 ; N perthousand ; G 198
 U 8249 ; WX 287 ; N guilsinglleft ; G 190
@@ -259,17 +270,32 @@ U 8250 ; WX 287 ; N guilsinglright ; G 191
 U 8355 ; WX 827 ; N franc ; G 247
 U 8482 ; WX 833 ; N trademark ; G 140
 U 8706 ; WX 534 ; N partialdiff ; G 152
+U 8707 ; WX 600 ; N .notdef ; G 0
+U 8708 ; WX 600 ; N .notdef ; G 0
+U 8709 ; WX 600 ; N .notdef ; G 0
 U 8710 ; WX 697 ; N increment ; G 168
 U 8719 ; WX 787 ; N product ; G 154
+U 8720 ; WX 600 ; N .notdef ; G 0
 U 8721 ; WX 718 ; N summation ; G 153
 U 8722 ; WX 833 ; N minus ; G 239
+U 8723 ; WX 600 ; N .notdef ; G 0
+U 8724 ; WX 600 ; N .notdef ; G 0
 U 8725 ; WX 167 ; N fraction ; G 188
+U 8726 ; WX 600 ; N .notdef ; G 0
+U 8727 ; WX 600 ; N .notdef ; G 0
+U 8728 ; WX 600 ; N .notdef ; G 0
 U 8729 ; WX 250 ; N periodcentered ; G 259
 U 8730 ; WX 657 ; N radical ; G 165
+U 8731 ; WX 600 ; N .notdef ; G 0
+U 8732 ; WX 600 ; N .notdef ; G 0
+U 8733 ; WX 600 ; N .notdef ; G 0
 U 8734 ; WX 833 ; N infinity ; G 146
 U 8747 ; WX 579 ; N integral ; G 156
 U 8776 ; WX 833 ; N approxequal ; G 167
 U 8800 ; WX 833 ; N notequal ; G 143
+U 8801 ; WX 600 ; N .notdef ; G 0
+U 8802 ; WX 600 ; N .notdef ; G 0
+U 8803 ; WX 600 ; N .notdef ; G 0
 U 8804 ; WX 833 ; N lessequal ; G 148
 U 8805 ; WX 833 ; N greaterequal ; G 149
 U 9674 ; WX 494 ; N lozenge ; G 185
